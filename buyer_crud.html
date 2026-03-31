@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile</title>
+
+<style>
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f5fff5;
+    margin: 0;
+}
+
+/* Header */
+.header{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #4a7c59;
+    color: white;
+}
+
+/* Container */
+.container{
+    padding: 30px;
+}
+
+/* Grid */
+.cart{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card{
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn{
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remove{ background-color: #ff6b6b; color: white; }
+.replace{ background-color: #4dabf7; color: white; }
+.insert{ background-color: #51cf66; color: white; display:block; margin:20px auto; }
+
+</style>
+</head>
+
+<body>
+
+<div class="header">🌿 Your Profile - Cart</div>
+
+<div class="container">
+
+    <button class="btn insert" onclick="goToHome()"> Purchase More Plants</button>
+
+    <div class="cart" id="cart">
+
+        <div class="card">
+            <img src="rose.jpg">
+            <p>Rose</p>
+            <button class="btn remove" onclick="removePlant(this)">Remove</button>
+            <button class="btn replace" onclick="replacePlant(this)">Replace</button>
+        </div>
+
+        <div class="card">
+            <img src="tulip.jpg">
+            <p>Tulip</p>
+            <button class="btn remove" onclick="removePlant(this)">Remove</button>
+            <button class="btn replace" onclick="replacePlant(this)">Replace</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function removePlant(btn){
+    btn.parentElement.remove();
+}
+
+function replacePlant(btn){
+    let newPlant = prompt("Enter new plant name:");
+    if(newPlant){
+        btn.parentElement.querySelector("p").innerText = newPlant;
+    }
+}
+
+function goToHome(){
+    window.location.href = "home.html"; 
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e6f4ea, #cde7d8);
+}
+
+/* Center container */
+.login-container {
+    width: 350px;
+    margin: 12vh auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus {
+    border-color: #66bb6a;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #388e3c;
+}
+
+/* Signup link */
+.signup-link {
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body style="display: flex; justify-content: center; align-items: center;">
+    <div class="login-container">
+    <h2>🌿 Welcome Back</h2>
+
+    <form onsubmit="event.preventDefault(); login();">
+        <label for="username">User Name</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        
+        <!-- <button type="button" class="login-btn" onclick="login()">Login</button> -->
+        <button type="submit" class="login-btn" name="action" value="login">Login</button>
+
+        <p class="signup-link">
+            Don’t have an account? <a href="sign-up.html">Sign Up</a>
+        </p>
+    </form>
+</div>
+<script src="first.js"></script>
+</body>
+</html>

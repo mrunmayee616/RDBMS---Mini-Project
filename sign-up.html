@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background: #f5f5f5;">
+    <div class="hero">
+        <button class="back-btn" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="right">
+            <img src="alter/plant1.png" alt="plant">
+        </div>
+        <div class="left">
+            <h2><center>Sign-up</center></h2>
+            <div class="sign-up-setup">
+                <form class="details" method="post" action="connect.php">
+                    <div class="user-box" style="display: flex; gap: 24vh;">
+                        <b><p>User Name: </p></b>
+                        <b><p>Enter Password:</p></b>
+                    </div>
+                    <div class="input-box" style="display: flex; gap: 2vh;">
+                        <input type="text" name="username" id="username" placeholder="Enter UserName (eg. Suresh123)" required>
+                        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    </div>
+                    <b><p>Photo link:</p></b>                   
+                    <input type="text" name="photo-user" id="photo-user" placeholder="Enter your photo - link" required>
+                    <div class="names" style="display: flex; gap: 10vh;">
+                        <b><p>First name: </p></b>
+                        <b><p>Middle name: </p></b>
+                        <b><p>Last name: </p></b>
+                    </div>
+                    <div class="in-names" style="display: flex; gap: 1.5vh;">
+                        <input type="text" placeholder="Enter first name" name="first-name" required>
+                        <input type="text" placeholder="Enter middle name" name="mid-name" required>
+                        <input type="text" placeholder="Enter last name" name="last-name">
+                    </div>
+                    <b><p>Contact Number: </p></b>
+                    <div class="contact-number" style="display: flex; gap: 7vh;">
+                        <div class="c1" style="display: flex; gap: 0.5vh;">
+                            <input type="tel" readonly value="+91" style="width: 5vh;"><input type="text" name="contact1" placeholder="Enter Contact-1" required>
+                        </div>
+                        <div class="c2" style="display: flex; gap: 0.5vh;">
+                            <input type="tel" readonly value="+91" style="width: 5vh;"><input type="text" name="contact2" placeholder="Enter Contact-2 (optional)">
+                        </div>
+                    </div>
+                    <b><p>Address: </p></b>
+                    <input type="text" name="address" placeholder="Enter Address as per Aadhar Card" style="height: 5vh;" required>
+                    <br><br>
+                    <center><button type="submit" name="action" value="signup" style="background: #a8d5ba; height: 6vh; width: 15vh; font-size: medium;">Sign-up</button></center>
+                    <center><p style="font-size: small;">Already have an Account? <a href="login.html">Log In</a></p></center>
+                </form>
+            </div>
+        </div>      
+    </div>
+
+<!-- <script>
+const input = document.getElementById('username');
+const text = "Enter UserName (eg. Suresh123)";
+let index = 0;
+
+function typePlaceholder() {
+    if (index <= text.length) {
+        input.placeholder = text.slice(0, index);
+        index++;
+        setTimeout(typePlaceholder, 100); // Adjust speed here (100ms per letter)
+    }
+}
+
+// Start typing effect when page loads
+window.onload = typePlaceholder;
+</script> -->
+</body>
+</html>
