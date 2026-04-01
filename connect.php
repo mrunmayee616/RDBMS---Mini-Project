@@ -20,7 +20,7 @@ if ($action == 'signup') {
     $address  = $_POST['address'] ?? '';
 
     // Insert user safely
-    $query = "INSERT INTO users(username, passwrd, fname, mname, lname, address, pfp_link)
+    $query = "INSERT INTO users(username, passwrd, fname, mname, lname, address_, pfp_link)
               VALUES($1, $2, $3, $4, $5, $6, $7)";
 
     $result = pg_query_params($conn, $query,
